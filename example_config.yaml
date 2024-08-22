@@ -15,13 +15,13 @@ MemorySystem:
   clock_ratio: 3
 
   DRAM:
-    impl: DDR4
+    impl: LPDDR5
     org:
-      preset: DDR4_8Gb_x8
+      preset: LPDDR5_2Gb_x16
       channel: 1
-      rank: 2
+      rank: 1
     timing:
-      preset: DDR4_2400R 
+      preset: LPDDR5_6400
 
   Controller:
     impl: Generic
@@ -30,7 +30,7 @@ MemorySystem:
     RefreshManager:
       impl: AllBank
     RowPolicy:
-      impl: ClosedRowPolicy
+      impl: OpenRowPolicy
       cap: 4
     plugins:
 
